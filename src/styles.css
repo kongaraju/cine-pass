@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+html,body,app-root, .root-container{
+    height: 100%;
+}
+
+body{
+    background-color: #222;
+    max-width: 780px;
+    margin: 0 auto;
+    color: #FFF;
+}
+.title-block{
+    font-size: 28px;
+    vertical-align: middle;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    height: 70px;
+}
+
+.videos-list-block{
+    height: calc(100% - 150px);
+    overflow: auto;
+}
+.video-block{
+    padding-left: 30px;
+    padding-bottom: 90px;
+    height: 410px; 
+}
+.video-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    padding-top: 15px;
+}
+
+.video-poster{
+    min-width: 150px;
+    min-height: 250px;
+    
+}
+.page-number-pill{
+    font-size: 30px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.paging-block{
+    padding: 10px;
+}
+ngb-typeahead-window{
+    width: 88.5%;
+    background-color: #EFEFEF !important;
+    padding: 5px !important;
+}
+ngb-typeahead-window .dropdown-item{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top:5px;
+    height: 50px;
+    background-color: #FFF;
+    color: #222;
+    padding: 0;
+    box-shadow: 0 1px 1px #99B;
+    border: 0;
+    border-radius: 5px;
+
+}
+ngb-typeahead-window .dropdown-item img{
+ height: 100%;
+ width: 50px;
+}

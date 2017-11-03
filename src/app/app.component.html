@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<ng-template #rt let-r="result" let-t="term">
+    <img [src]="'./assets/Slices/' + r['poster-image']" width="16">
+    {{ r.name}}
+</ng-template>
+<div class="container-fluid root-container" style="text-align:center">
+  <header class="title-block">
+    <span class=""></span>
+    <span>{{title}}</span>
+    <span class="pull-rght"></span>
+    <input type="text" class="form-control" placeholder="search movies..." [(ngModel)]="searchTerm" [ngbTypeahead]="search" [resultTemplate]="rt" />
+  </header>
+  <main class="videos-list-block">
+    <div *ngFor="let video of videos" class="col-md-4 col-xs-4 video-block">
+      <figure class="figure" title="{{video.name}}">
+        <img class="video-poster" src="./assets/Slices/{{video['poster-image']}}" />
+
+        <figcaption class="figure-caption video-title">{{video.name}}</figcaption>
+      </figure>
+    </div>
+  </main>
+  <footer class="paging-block">
+    <span class="badge badge-primary page-number-pill" (click)="navigate(1)">1</span>
+    <span class="badge badge-primary page-number-pill" (click)="navigate(2)">2</span>
+    <span class="badge badge-primary page-number-pill" (click)="navigate(3)">3</span>
+  </footer>
+
+</div>
