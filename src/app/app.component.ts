@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
@@ -21,6 +21,7 @@ export class AppComponent {
     this.navigate(1);
   }
   constructor(movieService: MovieService) {
+    
     this.movieService = movieService;
     this.search = this.search.bind(this);
   }
